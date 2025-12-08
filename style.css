@@ -1,0 +1,737 @@
+/* For Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+:root {
+    /* IDENTIDADE VISUAL SÓ PRAIA FC */
+    --accent: #FFD700; /* Amarelo Ouro do Escudo */
+    --black: #111111;  /* Preto Profundo */
+    --dark-gray: #1e1e1e;
+    --light-bg: #f4f4f4;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+main {
+    padding-top: 93px;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+    padding: 100px 5%;
+}
+
+/* - Navbar - */
+nav {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black); /* Menu Preto */
+    padding: 15px 50px;
+    transition: all 0.4s ease-out;
+    border-bottom: 2px solid var(--accent); /* Linha amarela embaixo */
+}
+
+nav.sticky {
+    padding: 10px 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.brand .logo-nav {
+    height: 60px; /* Logo um pouco maior */
+    width: auto;
+    border-radius: 50%; /* Se a logo for quadrada, fica redonda */
+    border: 2px solid var(--accent);
+}
+
+.menu {
+    display: flex;
+    gap: 32px;
+}
+
+.menu a {
+    color: var(--white); /* Texto branco no menu preto */
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--accent);
+}
+
+.btn-2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--accent);
+    color: var(--black);
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-2:hover {
+    transform: scale(1.05);
+    background-color: #e6c200;
+}
+
+.btn i.menu-btn {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* - Hero Section (Capa) - */
+.heropage {
+    min-height: calc(100vh - 93px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Gradiente Preto para Amarelo Escuro */
+    background: linear-gradient(135deg, var(--black) 30%, #443a00 100%);
+    color: var(--white);
+    padding: 0 20px;
+}
+
+.hero-headlines h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: var(--accent); /* Título em Amarelo */
+    margin-bottom: 20px;
+}
+
+.hero-headlines p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.hero-headlines-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-3 {
+    padding: 15px 30px;
+    background-color: var(--accent);
+    color: var(--black);
+    font-size: 1.1rem;
+    font-weight: 800;
+    border-radius: 8px;
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-3:hover {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.btn-transparent {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-transparent:hover {
+    background-color: var(--white);
+    color: var(--black);
+    border-color: var(--white);
+}
+
+/* - Sobre - */
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    background-color: var(--white);
+}
+
+.sobre-headlines {
+    max-width: 600px;
+}
+
+.sobre-headlines h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+.sobre-info {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.sobre-info-item {
+    text-align: center;
+}
+
+.sobre-info-item h5 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--accent);
+}
+
+.img-sobre {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: contain; /* Ajustado para não cortar logo */
+    border: 10px solid var(--accent);
+    background-color: var(--black);
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* - Ações / Cards - */
+.pets {
+    background-color: var(--light-bg);
+}
+
+.pets-headlines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.pets-headlines i {
+    font-size: 2.5rem;
+    color: var(--accent);
+}
+
+.pets-headlines h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.acoes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.acao-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.acao-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.acao-imagem {
+    flex: 1;
+    height: 300px;
+}
+
+.acao-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.acao-texto {
+    flex: 1;
+}
+
+.acao-texto h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.pet-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.pet-tags span {
+    background-color: rgba(255, 215, 0, 0.2);
+    color: #bfa100;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid var(--accent);
+}
+
+/* - Doação - */
+.doacao {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+}
+
+.doacao-container i {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.doacao-pix {
+    background: var(--white);
+    color: var(--black);
+    padding: 30px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+
+.pix-key {
+    background: #eee;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.pix-key p {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.btn-copy-pix {
+    background: var(--accent);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* - Parceiros - */
+.testimunhas {
+    text-align: center;
+    background-color: var(--white);
+}
+
+.testimunhas h6 {
+    color: var(--accent);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.testimunhas-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.testimunhas-item {
+    background: var(--light-bg);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 400px;
+    text-align: left;
+    border-left: 5px solid var(--accent);
+}
+
+.testimunhas-nome {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.testimunhas-nome i {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.testimunhas-nome h4 {
+    font-weight: 800;
+}
+
+/* - Footer - */
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 50px 5%;
+    border-top: 5px solid var(--accent);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand h1 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social a {
+    width: 40px;
+    height: 40px;
+    background: var(--accent);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    transform: translateY(-5px);
+    background: var(--white);
+}
+
+.contato-info-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.contato-info-item i {
+    color: var(--accent);
+}
+/* --- SEÇÃO DO JOGO (CHUTE A GOL) --- */
+.game-section {
+    background-color: #1a1a1a;
+    padding: 50px 0;
+    text-align: center;
+    overflow: hidden; /* Evita barra de rolagem na animação */
+}
+
+.game-container {
+    background: #4CAF50; /* Gramado */
+    border: 5px solid white;
+    border-radius: 10px;
+    height: 300px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+}
+
+/* Linha do meio de campo */
+.game-container::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255,255,255,0.5);
+    transform: translateX(-50%);
+}
+
+/* -- TRAVES DE GOL -- */
+.goal {
+    width: 60px;
+    height: 140px;
+    border: 5px solid white;
+    position: relative;
+    z-index: 10;
+}
+
+.left-goal {
+    border-left: none; /* Gol esquerdo aberto pra direita */
+    left: 10px;
+}
+
+.right-goal {
+    border-right: none; /* Gol direito aberto pra esquerda */
+    right: 10px;
+}
+
+/* Redinha do gol (efeito visual) */
+.net {
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 5px 5px;
+    opacity: 0.3;
+}
+
+/* -- ÁREA CENTRAL -- */
+.field-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 20;
+}
+
+.message-container h2 {
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 #000;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+/* -- BOLA E PÉ -- */
+.ball-container {
+    position: relative;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+}
+
+.ball {
+    font-size: 3rem; /* Tamanho da bola */
+    color: white;
+    background: black; /* Fundo pra preencher o ícone */
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    position: relative;
+    z-index: 5;
+}
+
+/* O Pé (Chuteira) */
+.leg {
+    position: absolute;
+    top: -20px;
+    left: -100px; /* Começa escondido na esquerda */
+    width: 80px;
+    height: 40px;
+    background: transparent;
+    transition: all 0.2s ease-in;
+    opacity: 0; /* Invisível */
+    z-index: 4;
+}
+
+/* Desenho simples da chuteira com CSS (pode substituir por img) */
+.shoe {
+    width: 100%;
+    height: 100%;
+    background: var(--accent); /* Amarelo do time */
+    border-radius: 20px 50px 10px 10px;
+    border: 2px solid black;
+    box-shadow: -5px 5px 0 rgba(0,0,0,0.3);
+}
+
+/* --- ANIMAÇÕES (QUANDO CHUTAR) --- */
+
+/* 1. Pé aparecendo e chutando */
+.kick-animation .leg {
+    animation: chutar 0.4s ease-in-out forwards;
+}
+
+@keyframes chutar {
+    0% { opacity: 1; transform: translateX(0) rotate(-20deg); }
+    50% { transform: translateX(60px) rotate(0deg); } /* Bate na bola */
+    100% { opacity: 0; transform: translateX(40px); } /* Some */
+}
+
+/* 2. Bola voando para o gol direito */
+.kick-animation .ball {
+    animation: voarProGol 0.8s forwards 0.2s; /* 0.2s delay pra esperar o pé bater */
+}
+
+@keyframes voarProGol {
+    0% { transform: translate(0, 0) rotate(0); }
+    100% { 
+        /* Vai para a direita (px) e gira */
+        transform: translate(350px, -20px) rotate(720deg); 
+    }
+}
+
+/* Responsivo para celular (ajusta a distância do chute) */
+@media (max-width: 768px) {
+    .game-container { height: 200px; }
+    @keyframes voarProGol {
+        100% { transform: translate(120px, -10px) rotate(720deg); }
+    }
+}
+.copyright {
+    text-align: center;
+    margin-top: 50px;
+    opacity: 0.5;
+    font-size: 0.9rem;
+}
+
+/* - Widget Flutuante - */
+.floating-widget {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 990;
+}
+.floating-item {
+    width: 60px;
+    height: 60px;
+    background:  #e6c200; /* Verde Zap */
+    color: #111;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.floating-item:hover {
+    transform: scale(1.1);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Você precisa do JS original para o menu funcionar */
+        position: fixed;
+        top: 0; right: 0;
+        height: 100vh;
+        width: 70%;
+        background: var(--black);
+        flex-direction: column;
+        padding: 100px 30px;
+    }
+    .menu.active { display: flex; }
+    
+    .btn { display: block; color: white; }
+    
+    .hero-headlines h1 { font-size: 2.2rem; }
+    
+    .acao-item, .acao-item.reverse {
+        flex-direction: column;
+    }
+    
+    .acao-imagem { width: 100%; height: 250px; }
+    
+    .img-sobre { width: 200px; height: 200px; }
+}
+/* --- ESTILO PADRÃO (DESKTOP/PC) --- */
+
+/* Esconde o botão de hambúrguer no PC */
+.btn {
+    display: none; 
+}
+
+/* O menu fica visível e em linha no PC */
+.menu {
+    display: flex;
+    gap: 32px;
+}
+
+/* --- ESTILO MOBILE (CELULAR - Telas menores que 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Faz o botão hambúrguer APARECER no celular */
+    .btn {
+        display: block; 
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--white); /* Ou a cor que preferir */
+    }
+
+    /* 2. Configura o menu lateral (escondido por padrão) */
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Começa fora da tela, na direita */
+        width: 100%;  /* Ocupa a tela toda ou use 70% */
+        height: 100vh;
+        background-color: #111; /* Cor de fundo do menu */
+        flex-direction: column; /* Links um embaixo do outro */
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s ease; /* Animação suave */
+        z-index: 1000; /* Fica em cima de tudo */
+    }
+
+    /* 3. Classe que o JS vai adicionar para mostrar o menu */
+    .menu.active {
+        right: 0; /* Traz o menu para dentro da tela */
+    }
+
+    /* Estilo do botão de fechar (X) dentro do menu */
+    .menu .btn {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+    
+    .menu a {
+        font-size: 1.5rem; /* Links maiores no celular */
+        margin: 20px 0;
+        display: block;
+    }
+}

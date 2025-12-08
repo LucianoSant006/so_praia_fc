@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Só Praia FC | Força e Solidariedade</title>
+    
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <script src="https://unpkg.com/scrollreveal" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js" defer></script>
+
+    <script src="script.js" defer></script> 
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="brand">
+            <img src="img/logo_so-praia.jpeg" alt="Logo Só Praia FC" class="logo-nav">
+        </a>
+
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a href="#inicio">Início</a>
+            <a href="#historia">História</a>
+            <a href="#acoes">Ações Sociais</a>
+            <a href="#contato">Contato</a>
+        </div>
+
+        <button class="btn-2" onclick="location.href='#doacao'">
+            <p>Seja Sócio/Doe</p>
+            <i class="fa-solid fa-handshake"></i>
+        </button>
+
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </nav>
+
+    <main>
+        <section class="heropage" id="inicio">
+            <div class="hero-headlines">
+                <h1>SÓ PRAIA, FORÇA E SOLIDARIEDADE</h1>
+                <p class="reveal-type" data-bg-color="#333" data-fg-color="#FBC02D">
+                    "Não dá pra ser feliz quando o problema é social."
+                </p>
+                <p style="font-size: 1rem; margin-top: 10px; opacity: 0.8;">Fundado em 29.11.2001 - Campinas (SP)</p>
+            </div>
+
+            <div class="hero-headlines-buttons">
+                <button class="btn-3" onclick="location.href='#acoes'">Conhecer Projetos</button>
+                <button class="btn-3 btn-transparent" onclick="location.href='https://www.instagram.com/sopraiafc/'">
+                    <i class="fa-brands fa-instagram"></i> Siga no Insta
+                </button>
+            </div>
+        </section>
+
+        <section class="sobre" id="historia">
+            <div class="sobre-headlines">
+                <h1>Mais que um time, uma família.</h1>
+                <p>
+                    Fundado em 2001, o <strong>Só Praia FC</strong> nasceu da união de amigos e cresceu com o propósito de fazer a diferença. 
+                    Utilizamos o esporte como ferramenta de inclusão e a solidariedade como nossa maior bandeira.
+                </p>
+                
+                <div class="sobre-info">
+                    <div class="sobre-info-item">
+                        <h5>+20 Anos</h5>
+                        <h6>de História</h6>
+                    </div>
+                    <div class="sobre-info-item">
+                        <h5>Campinas</h5>
+                        <h6>Nossa Casa</h6>
+                    </div>
+                    <div class="sobre-info-item">
+                        <h5>Social</h5>
+                        <h6>Nosso Foco</h6>
+                    </div>
+                </div>
+            </div>
+            <img src="img/logo_so-praia.jpeg" class="img-sobre" alt="Brasão Só Praia">
+        </section>
+
+        <section class="pets" id="acoes">
+            <div class="pets-headlines">
+                <i class="fa-solid fa-people-carry-box"></i>
+                <h1>Nossa Atuação</h1>
+            </div>
+            <p style="text-align: center; color: #555; margin-bottom: 40px;">
+                Futebol é o que nos une, ajudar o próximo é o que nos move.
+            </p>
+
+            <div class="acoes-container">
+                <div class="acao-item">
+                    <div class="acao-imagem">
+                        <div style="background: #333; height: 100%; border-radius: 15px; display:flex; align-items:center; justify-content:center; color:white;">
+                            <i class="fa-regular fa-futbol" style="font-size: 5rem;"></i>
+                        </div>
+                    </div>
+                    <div class="acao-texto">
+                        <h3>Esporte e Lazer</h3>
+                        <div class="pet-tags"> 
+                            <span>Futebol</span>
+                            <span>Amizade</span>
+                            <span>Saúde</span>
+                        </div>
+                        <p>Promovemos encontros esportivos, campeonatos e rachões que fortalecem os laços da comunidade, tirando jovens da ociosidade e promovendo a saúde através do futebol.</p>
+                    </div>
+                </div>
+    
+                <div class="acao-item reverse">
+                    <div class="acao-imagem">
+                         <div style="background: #FBC02D; height: 100%; border-radius: 15px; display:flex; align-items:center; justify-content:center; color:#131313;">
+                            <i class="fa-solid fa-bowl-food" style="font-size: 5rem;"></i>
+                        </div>
+                    </div>
+                    <div class="acao-texto">
+                        <h3>Ação Social e Alimentos</h3>
+                        <div class="pet-tags">
+                            <span>Cestas Básicas</span>
+                            <span>Sopas</span>
+                            <span>Campanhas</span>
+                        </div>
+                        <p>Organizamos arrecadações de alimentos, campanhas do agasalho e distribuição de marmitas para quem mais precisa. Acreditamos que a fome não espera.</p>
+                    </div>
+                </div>
+                
+                <div class="acao-item">
+                    <div class="acao-imagem">
+                        <div style="background: #333; height: 100%; border-radius: 15px; display:flex; align-items:center; justify-content:center; color:white;">
+                            <i class="fa-solid fa-child-reaching" style="font-size: 5rem;"></i>
+                        </div>
+                    </div>
+                    <div class="acao-texto">
+                        <h3>Eventos Comunitários</h3>
+                        <div class="pet-tags">
+                            <span>Dia das Crianças</span>
+                            <span>Natal</span>
+                            <span>Alegria</span>
+                        </div>
+                        <p>Datas especiais merecem comemorações especiais. Realizamos festas para as crianças da comunidade com brinquedos, doces e muita diversão.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="doacao" id="doacao">
+            <div class="doacao-container">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <h1>Fortaleça essa Corrente</h1>
+                <p>Mantemos nossas atividades através da colaboração de amigos, sócios e parceiros. Ajude o Só Praia a continuar fazendo o bem!</p>
+                
+                <div class="doacao-pix">
+                    <h3>Chave PIX (CNPJ/Email/Telefone):</h3>
+                    <div class="pix-key">
+                        <p id="pix-key-text">solicite-no-whatsapp</p> 
+                        <button class="btn-copy-pix" id="copy-pix-btn" title="Copiar">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </div>
+                    <h4>Associação Só Praia FC</h4>
+                    
+                    <a href="https://wa.me/5519999999999" target="_blank" class="btn-3" style="margin-top: 20px; width: 100%; justify-content: center;">
+                        <i class="fa-brands fa-whatsapp"></i> Falar com Diretoria
+                    </a>
+                </div>
+            </div>
+        </section>
+<section class="game-section">
+    <div class="game-container">
+        <div class="goal left-goal">
+            <div class="net"></div>
+        </div>
+
+        <div class="field-area">
+            <div class="message-container">
+                <h2 id="game-msg">Clique na bola para chutar!</h2>
+            </div>
+            
+            <div class="ball-container" id="ball-container" onclick="chutarBola()">
+                <div class="leg">
+                    <div class="shoe"></div>
+                </div>
+                <i class="fa-solid fa-futbol ball"></i>
+            </div>
+        </div>
+
+        <div class="goal right-goal">
+            <div class="net"></div>
+        </div>
+    </div>
+</section>
+        <section class="testimunhas" id="parceiros">
+            <h6>Quem está com a gente</h6>
+            <h1>Parceiros e Apoios</h1>
+            <div class="testimunhas-container">
+                <div class="testimunhas-item">
+                    <div class="testimunhas-pessoa">
+                        <div class="testimunhas-nome">
+                            <i class="fa-solid fa-building"></i>
+                            <div class="testimunhas-nome-item">
+                                <h4>Comércio Local</h4>
+                                <p>Apoio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimunhas-text">"O comércio local apoia o esporte e a cultura da nossa região junto com o Só Praia."</p>
+                </div>
+
+                <div class="testimunhas-item">
+                    <div class="testimunhas-pessoa">
+                        <div class="testimunhas-nome">
+                            <i class="fa-solid fa-users"></i>
+                            <div class="testimunhas-nome-item">
+                                <h4>Comunidade</h4>
+                                <p>Voluntários</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimunhas-text">"A força da nossa torcida e dos moradores que sempre comparecem nas ações."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h1>SÓ PRAIA <b class="accent">FC</b></h1>
+                <p>Associação, Força e Solidariedade.</p>
+                <div class="social">
+                    <a href="https://www.instagram.com/sopraiafc/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h2>Contato</h2>
+                <div class="contato-info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Campinas, São Paulo</p>
+                </div>
+                <div class="contato-info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>contato@sopraiafc.com.br</p>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">© 2001 - 2025 Só Praia FC. Todos os direitos reservados.</p>
+    </footer>
+
+    <div class="floating-widget">
+        <div class="floating-menu">
+            <a href="https://www.instagram.com/sopraiafc/" target="_blank" class="floating-item" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
