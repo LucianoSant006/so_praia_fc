@@ -1,4 +1,3 @@
-
 const navbar = document.querySelector("nav");
 window.addEventListener("scroll", () =>
     navbar.classList.toggle("sticky", window.scrollY > 0)
@@ -59,7 +58,11 @@ sr.reveal(".footer-brand");
 sr.reveal(".footer-links", { delay: 500, origin: "left" });
 sr.reveal(".footer-doacao", { delay: 500, origin: "bottom" });
 sr.reveal(".copyright", { delay: 600 });
-sr.reveal(".presentes-container", { delay: 300 }); // Animação para nova seção
+sr.reveal(".presentes-container", { delay: 300 }); 
+
+// REVEAL PARA A NOVA SEÇÃO DE SERVIÇOS
+sr.reveal(".servicos-headlines");
+sr.reveal(".servico-item", { interval: 200 });
 
 // GSAP Text Reveal
 const splitTypes = document.querySelectorAll(".reveal-type");
@@ -101,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Rolar para a direita
     function scrollNext() {
+        if(!container) return; // Evita erro se o carrossel não existir
         // Verifica se chegou no fim
         if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
             // Se chegou no fim, volta para o começo suavemente
@@ -113,19 +117,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Rolar para a esquerda
     function scrollPrev() {
+        if(!container) return;
         container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     }
 
     // --- Ativar os Botões ---
-    nextBtn.addEventListener("click", () => {
-        scrollNext();
-        resetTimer(); // Reinicia o tempo se a pessoa clicar
-    });
+    if(nextBtn) {
+        nextBtn.addEventListener("click", () => {
+            scrollNext();
+            resetTimer(); // Reinicia o tempo se a pessoa clicar
+        });
+    }
 
-    prevBtn.addEventListener("click", () => {
-        scrollPrev();
-        resetTimer();
-    });
+    if(prevBtn) {
+        prevBtn.addEventListener("click", () => {
+            scrollPrev();
+            resetTimer();
+        });
+    }
 
     // --- Automação (Passar sozinho) ---
     
@@ -142,14 +151,16 @@ document.addEventListener("DOMContentLoaded", () => {
         startAutoScroll();
     }
 
-    // Pausa quando o mouse está em cima do carrossel
-    container.addEventListener("mouseenter", stopAutoScroll);
-    
-    // Volta a rodar quando o mouse sai
-    container.addEventListener("mouseleave", startAutoScroll);
+    if(container) {
+        // Pausa quando o mouse está em cima do carrossel
+        container.addEventListener("mouseenter", stopAutoScroll);
+        
+        // Volta a rodar quando o mouse sai
+        container.addEventListener("mouseleave", startAutoScroll);
 
-    // Inicia a contagem assim que a página carrega
-    startAutoScroll();
+        // Inicia a contagem assim que a página carrega
+        startAutoScroll();
+    }
 });
 // Seleciona os elementos
 

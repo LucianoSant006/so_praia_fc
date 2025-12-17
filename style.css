@@ -311,6 +311,80 @@ nav.sticky {
     border: 1px solid var(--accent);
 }
 
+/* --- SEÇÃO PRESTAÇÃO DE SERVIÇOS (NOVO) --- */
+.servicos {
+    background-color: var(--white);
+    text-align: center;
+}
+
+.servicos-headlines h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.servicos-headlines p {
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servico-item {
+    background: var(--light-bg);
+    padding: 40px 30px;
+    border-radius: 20px;
+    transition: 0.3s;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.servico-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    background: var(--white);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.servico-item i {
+    font-size: 3rem;
+    color: var(--accent);
+    background: var(--black);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.servico-item h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.servico-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.servico-item .btn-2 {
+    margin-top: auto; /* Empurra o botão para o final */
+    font-size: 0.9rem;
+    padding: 10px 25px;
+}
+
 /* - Doação - */
 .doacao {
     background-color: var(--black);
